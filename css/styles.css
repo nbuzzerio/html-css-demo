@@ -8,8 +8,8 @@
 
 /* Typography */
 html {
-    /* 62.5% of 16px default = 10px*/
-    font-size: 62.5%;
+  /* 62.5% of 16px default = 10px*/
+  font-size: 62.5%;
 }
 
 body {
@@ -28,96 +28,133 @@ h3 {
 }
 
 h1 {
-    font-size: 7rem;
+  font-size: 7rem;
 }
 
 h2 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 h3 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 p {
-    margin-top: 0;
-    /* this is done to avoid margin collapsing and allow h3 element to dictate margin. Note we tried 2rem but custom font had some spacing already so changed to just 1rem*/
+  margin-top: 0;
+  /* this is done to avoid margin collapsing and allow h3 element to dictate margin. Note we tried 2rem but custom font had some spacing already so changed to just 1rem*/
 }
 
 @media screen and (min-width: 1024px) {
-    body {
-        font-size: 1.8rem;
-    }
+  body {
+    font-size: 1.8rem;
+  }
 
-    h1 {
-        font-size: 8rem;
-    }
+  h1 {
+    font-size: 8rem;
+  }
 
-    h2 {
-        font-size: 4 rem;
-    }
+  h2 {
+    font-size: 4 rem;
+  }
 
-    h3 {
-        font-size: 2.4rem;
-    }
+  h3 {
+    font-size: 2.4rem;
+  }
 }
 
 /* Links */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .link-arrow {
-    color: var(--color-accent);
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
+  color: var(--color-accent);
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 .link-arrow::after {
-    content: '-->';
-    margin-left: 5px;
-    transition: margin 0.15s;
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
 }
 .link-arrow:hover::after {
-    content: '-->';
-    margin-left: 10px;
+  content: "-->";
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 1024px) {
-    .link-arrow {
-        font-size: 1.5rem;
-    }
+  .link-arrow {
+    font-size: 1.5rem;
+  }
 }
 
 /* Badges */
 .badge {
-    border-radius: 20px;
-    font-size: 2rem;
-    font-weight: 600;
-    padding: 0.5rem 2rem;
-    white-space: nowrap;
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
 }
 
 .badge--primary {
-    background: var(--color-primary);
-    color: #fff;
+  background: var(--color-primary);
+  color: #fff;
 }
 
 .badge--secondary {
-    background: var(--color-secondary);
-    color: #fff;
+  background: var(--color-secondary);
+  color: #fff;
 }
 
 .badge--small {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 @media screen and (min-width: 1024px) {
-    .badge {
-        font-size: 1.5rem;
-    }
+  .badge {
+    font-size: 1.5rem;
+  }
 
-    .badge--small {
-        font-size: 1.2rem;
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
+
+/* Lists */
+.list {
+  color: var(--color-headings);
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  list-style-image: url(../images/tick.svg);
+  padding-left: 3rem;
+}
+.list__item::before {
+  content: "";
+  display: inline-block;
+  height: 1.5rem;
+  width: 2.5rem;
+  background-image: url(../images/sushi-food.svg);
+  background-size: cover;
+  margin-right: 1rem;
+}
+
+.list--tick .list__item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .list--tick .list__item {
+        padding-left: 0;
     }
 }
